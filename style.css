@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+/*Defining custom CSS variable for overlay color */
 :root {
     --overlay-color: #03a9f4
 }
 
+/* Resetting margin and padding; Setting box-sizing and font-family for all elements */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,13 +13,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Styling the showcase section */
 .showcase {
     position: absolute;
     right: 0;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background: #111;
@@ -26,10 +29,12 @@
     transition: 0.5s;
 }
 
+/* Styling the showcase section when active */
 .showcase.active {
     right: 300px;
 }
 
+/* Styling the header within the showcase */
 .showcase header {
     position: absolute;
     top: 0;
@@ -43,11 +48,13 @@
 
 }
 
+/* Styling the logo */
 .logo {
     text-transform: uppercase;
     cursor: pointer;
 }
 
+/* Styling the toggle button */
 .toggle {
     position: relative;
     width: 60px;
@@ -59,13 +66,15 @@
     cursor: pointer;
 }
 
+/* Styling the toggle button when active */
 .toggle.active {
     background: url('close.png');
     background-repeat: no-repeat;
     background-size: 25px;
-    background-position: center; 
+    background-position: center;
 }
 
+/* Styling the background video */
 .showcase video {
     position: absolute;
     top: 0;
@@ -76,6 +85,7 @@
     opacity: 0.8;
 }
 
+/* Styling the overlay for the video */
 .overlay {
     position: absolute;
     top: 0;
@@ -86,6 +96,7 @@
     mix-blend-mode: overlay;
 }
 
+/* Styling the text content of the showcase */
 .text {
     position: relative;
     z-index: 10;
@@ -126,11 +137,12 @@
 
 }
 
-
+/* Styling the text link on hover */
 .text a:hover {
     letter-spacing: 6px;
 }
 
+/* Styling the social media links */
 .social {
     position: absolute;
     bottom: 20px;
@@ -151,10 +163,12 @@
     transition: 0.5s;
 }
 
+/* Styling the social media links on hover */
 .social li a:hover {
     transform: scale(0.5) translateY(-15px);
 }
 
+/* Styling the navigation menu*/
 .menu {
     position: absolute;
     top: 0;
@@ -166,11 +180,14 @@
     justify-content: center;
 }
 
+/* Styling the unordered list within the menu */
+
 .menu ul {
     position: relative;
     list-style: none;
 }
 
+/* Styling the navigation links */
 .menu ul li a {
     text-decoration: none;
     font-size: 24px;
@@ -178,12 +195,13 @@
 }
 
 .menu ul li a:hover {
-    color:var(--overlay-color)
+    color: var(--overlay-color)
 }
 
 
-
+/* Media query for adjusting styles for screens with a max width of 798px */
 @media(max-width: 798px) {
+
     .showcase,
     .showcase header {
         padding: 40px;

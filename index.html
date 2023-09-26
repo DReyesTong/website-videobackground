@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Travel with Daniel's Dream Destinations to explore the world's most beautiful places">
+    <meta name="keywords" content="Travel, Destinations, Adventure, Trips">
     <link rel="stylesheet" href="style.css">
-    <title>Travel landing Page</title>
+    <title>Daniel's Dream Destinations</title>
 </head>
+
 <body>
+    <!-- Showcase section containing header, video, overlay, text, and social media links -->
     <section class="showcase">
         <header>
-            <h2 class="logo">Travel</h2>
+            <!-- Logo of the website -->
+            <h2 class="logo">Daniel&#39;s Dream Destinations</h2>
+            <!-- Menu toggle button -->
             <div class="toggle"></div>
         </header>
+        <!-- Background video -->
         <video src="pexels-mikhail-nilov-8436364 (2160p).mp4" muted loop autoplay></video>
-        
         <div class="overlay"></div>
-
+        <!-- Text content of the showcase -->
         <div class="text">
-            <h2>Never Stop</h2>
-            <h3>Exploring THe World</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aut adipisci quis dolores perspiciatis ipsum numquam harum autem sequi nisi!</p>
-            <a href="#">Explore</a>
+            <h2>Journey Beyond</h2>
+            <h3>the Ordinary</h3>
+            <p>Seize the moment, and let every journey bring you closer to the heart of our magnificent world.</p>
+            <a href="#">Set Sail for Adventure</a>
         </div>
-        
+        <!-- Social media links -->
         <ul class="social">
-            <li><a href="#"><img src="facebook.png" alt=""></a></li>
-            <li><a href="#"><img src="twitter.png" alt=""></a></li>
-            <li><a href="#"><<img src="instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="facebook.png" alt="Follow us on Facebook"></a></li>
+            <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
         </ul>
     </section>
-
+    <!-- Navigation menu -->
     <div class="menu">
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
-
         </ul>
     </div>
 
+
     <script>
+        // Selecting the menu toggle button and showcase section
         const menuToggle = document.querySelector('.toggle')
         const showcase = document.querySelector('.showcase')
+
+        // Adding click event listener to toggle menu and showcase active state
 
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active')
             showcase.classList.toggle('active')
-
         })
 
+
+        // Selecting all menu items and toggling active state on click
+        const menuItems = document.querySelectorAll('.menu ul li a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                showcase.classList.toggle('active');
+            });
+        });
     </script>
-
-
-    
 </body>
+
 </html>
